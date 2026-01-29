@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv8glumeo6v5e"]
+
+[ext_resource type="Texture2D" uid="uid://5smpuniyg5yu" path="res://assets/Breaking_Animation.png" id="1_yc2hl"]
+[ext_resource type="Script" uid="uid://dxa4llkgv3aqg" path="res://src/player/breaking_animation.gd" id="2_g6vpm"]
+
+[node name="BreakingAnimation" type="Sprite2D"]
+texture = ExtResource("1_yc2hl")
+hframes = 8
+script = ExtResource("2_g6vpm")

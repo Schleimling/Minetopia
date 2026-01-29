@@ -1,0 +1,26 @@
+{
+	"layer_0": {
+		"layer_start": 0,
+		"layer_end": 1,
+		"ore_id": "grass_block",
+		"include_ore": false
+	},	
+	"layer_1": {
+		"layer_start": 1,
+		"layer_end": 4,
+		"ore_id": "dirt_block",
+		"include_ore": false
+	},
+	"layer_2": {
+		"layer_start": 4,
+		"layer_end": 299,
+		"ore_id": "stone",
+		"include_ore": true
+	},
+	"layer_3": {
+		"layer_start": 300,
+		"layer_end": 699,
+		"ore_id": "hardstone",
+		"include_ore": true
+	}
+}

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://eqx5k0i73s7u"]
+
+[ext_resource type="Texture2D" uid="uid://0kptybv11861" path="res://assets/tools/pickaxe_copper.png" id="1_6o2fr"]
+[ext_resource type="Script" uid="uid://badlld3innm6" path="res://src/player/thrown_pickaxe.gd" id="1_8g10t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8g10t"]
+radius = 5.3033013
+height = 14.849243
+
+[node name="ThrownPickaxe" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_8g10t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6o2fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.732234, -6.232233)
+rotation = -0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("CapsuleShape2D_8g10t")

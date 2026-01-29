@@ -1,0 +1,137 @@
+{
+	"grass_block": {
+		"strength": 0,
+		"worth": 1,
+		"max_health": 20,
+		"texture_origin": {
+			"x": 30,
+			"y": 30
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 100.0,
+		"chance_max": 100.0,
+		"height_min": -1,
+		"height_max": -1
+	},
+	"dirt_block": {
+		"strength": 0,
+		"worth": 1,
+		"max_health": 20,
+		"texture_origin": {
+			"x": 30,
+			"y": 31
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 100.0,
+		"chance_max": 100.0,
+		"height_min": -1,
+		"height_max": -1
+	},
+	"stone": {
+		"strength": 0,
+		"worth": 1,
+		"max_health": 20,
+		"texture_origin": {
+			"x": 0,
+			"y": 0
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 100.0,
+		"chance_max": 100.0,
+		"height_min": 0,
+		"height_max": 299
+	},
+	"stone_coal_ore": {
+		"strength": 0,
+		"worth": 5,
+		"max_health": 40,
+		"texture_origin": {
+			"x": 0,
+			"y": 1
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 10.0,
+		"chance_max": 15.0,
+		"height_min": 0,
+		"height_max": 299
+	},
+	"stone_copper_ore": {
+		"strength": 1,
+		"worth": 10,
+		"max_health": 50,
+		"texture_origin": {
+			"x": 0,
+			"y": 2
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 8.0,
+		"chance_max": 15.0,
+		"height_min": 50.0,
+		"height_max": 299.0
+	},
+	"stone_iron_ore": {
+		"strength": 1,
+		"worth": 20,
+		"max_health": 100,
+		"texture_origin": {
+			"x": 0,
+			"y": 5
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 5.0,
+		"chance_max": 15.0,
+		"height_min": 150,
+		"height_max": 299
+	},
+	"stone_diamond_ore": {
+		"strength": 2,
+		"worth": 100,
+		"max_health": 300,
+		"texture_origin": {
+			"x": 0,
+			"y": 3
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 0.5,
+		"chance_max": 3.0,
+		"height_min": 0,
+		"height_max": 299
+	},
+	"stone_emerald_ore": {
+		"strength": 2,
+		"worth": 250,
+		"max_health": 600,
+		"texture_origin": {
+			"x": 0,
+			"y": 4
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 0.5,
+		"chance_max": 1.0,
+		"height_min": 0.0,
+		"height_max": 299.0
+	},
+	"hardstone": {
+		"strength": 3,
+		"worth": 5,
+		"max_health": 60,
+		"texture_origin": {
+			"x": 1,
+			"y": 0
+		},
+		"weight_min": 0.2,
+		"weight_max": 8.0,
+		"chance_min": 100.0,
+		"chance_max": 100.0,
+		"height_min": 300.0,
+		"height_max": 699.0
+	},
+}

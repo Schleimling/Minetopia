@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0d6qyhi1s2d1"]
+
+[ext_resource type="Script" uid="uid://qrl01xnp4ckw" path="res://src/player/rope_segment.gd" id="1_32jlq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_065jn"]
+size = Vector2(2, 8)
+
+[sub_resource type="Gradient" id="Gradient_ktksn"]
+colors = PackedColorArray(0.5078228, 0.20746219, 9.62615e-08, 1, 0.6542754, 0.3078981, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_32jlq"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_61h1m"]
+width = 2
+height = 8
+noise = SubResource("FastNoiseLite_32jlq")
+color_ramp = SubResource("Gradient_ktksn")
+
+[node name="RopeSegment" type="RigidBody2D"]
+disable_mode = 2
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_32jlq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_065jn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("NoiseTexture2D_61h1m")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]

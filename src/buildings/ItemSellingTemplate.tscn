@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://caca6wxx2wfhv"]
+
+[ext_resource type="Texture2D" uid="uid://blmv1evp70pjo" path="res://assets/ores/SpriteSheet.png" id="1_g4axl"]
+[ext_resource type="Script" uid="uid://bm1b274wey4no" path="res://sprite_2d.gd" id="2_r7p0t"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_g4axl")
+hframes = 32
+vframes = 32
+script = ExtResource("2_r7p0t")

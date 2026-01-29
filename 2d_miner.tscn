@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://oruxph6kr646"]
+
+[ext_resource type="Script" uid="uid://nl7ugipgmtm" path="res://src/network/Lan/multiplayer_gui.gd" id="1_44q0f"]
+[ext_resource type="PackedScene" uid="uid://gbulvq2k1uwl" path="res://world.tscn" id="1_g0clj"]
+[ext_resource type="Script" uid="uid://o5dgg4y2w4y6" path="res://src/gui/ingame_gui.gd" id="3_ai364"]
+
+[node name="2DMiner" type="Node" unique_id=1351270846]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1471369172]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=1327769152]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=146099413]
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(576, 324)
+render_target_update_mode = 4
+
+[node name="World" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=1428957044 instance=ExtResource("1_g0clj")]
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=57872725]
+layer = 99
+
+[node name="MultiplayerGUI" type="Control" parent="GUI" unique_id=1217642615]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44q0f")
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MultiplayerGUI" unique_id=1072555795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConnectButton" type="Button" parent="GUI/MultiplayerGUI/CenterContainer" unique_id=443954209]
+layout_mode = 2
+text = "Connect To Server"
+
+[node name="IngameGUI" type="Control" parent="GUI" unique_id=308648332]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_ai364")
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/IngameGUI" unique_id=1768149035]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Money" type="Label" parent="GUI/IngameGUI/CenterContainer" unique_id=266023737]
+layout_mode = 2
+text = "Money: 12$"
+
+[node name="DepthMeter" type="Label" parent="GUI/IngameGUI" unique_id=1127261622]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Depth: 1m"
+
+[connection signal="button_down" from="GUI/MultiplayerGUI/CenterContainer/ConnectButton" to="GUI/MultiplayerGUI" method="_on_connect_button_button_down"]
